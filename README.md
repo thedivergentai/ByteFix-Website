@@ -42,7 +42,7 @@ The project is structured as follows:
 *   Gatsby: A React-based static site generator.
 *   React: A JavaScript library for building user interfaces.
 *   CSS: Styling language for web pages.
-*   Framer Motion: A production-ready motion library for React.
+*   Motion: A production-ready motion library for React.
 
 ## Setup Instructions
 

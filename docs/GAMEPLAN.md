@@ -27,7 +27,7 @@ This document outlines the steps to update the Gatsby website "ByteFix-Website" 
 ## 3. Content Update
 
 *   **Homepage Content:**
-    *   The `src/pages/index.js` file now includes content for the hero section, services section, "Why Choose Us?" section, testimonials section, and repair request form section.
+    *   The `src/pages/index.js` file now uses components for the hero section, services section, "Why Choose Us?" section, testimonials section, and repair request form section.
     *   The content has been updated to be benefit-driven and solution-focused, using clear and concise language.
 *   **Other Pages (if any):**
     *   Update the content on any other existing pages (e.g., "About Us," "Services," "Contact") to align with the brand guidelines. (This is a manual step for the user).
@@ -135,3 +135,4 @@ This document outlines the steps to update the Gatsby website "ByteFix-Website" 
 *   Basic form validation has been implemented.
 *   Clear and recognizable icons (💻, 🦠, 💾, ⚙️) are now used for each service.
 *   The testimonial carousel now scrolls infinitely.
+*   The main sections of the landing page have been split into separate components.

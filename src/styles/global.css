@@ -1,0 +1,255 @@
+/* Global Styles for ByteFix Website */
+
+/* Color Palette */
+:root {
+  --primary-color: #0D6EFD;
+  --secondary-color: #212529;
+  --accent-color: #F8F9FA;
+  --text-color: #212529;
+  --light-gray: #E9ECEF; /* For borders and subtle backgrounds */
+}
+
+/* Typography */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+/* Hero Section */
+.hero-section {
+  background-color: var(--accent-color);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero-heading {
+  color: var(--primary-color);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-subheading {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.hero-button {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+.hero-button:hover {
+  transform: scale(1.05);
+}
+
+/* Services Section */
+.services-section {
+  padding: 3rem 2rem;
+}
+
+.services-heading {
+  color: var(--primary-color);
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.service-card {
+  border: 1px solid var(--light-gray);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 1.5rem; /* Add margin for spacing */
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.service-title {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-description {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Why Choose Us Section */
+.why-choose-us-section {
+  background-color: var(--accent-color);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.why-choose-us-heading {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.why-choose-us-benefit {
+  margin-bottom: 1.5rem;
+}
+
+.why-choose-us-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.why-choose-us-title {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.why-choose-us-description {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.testimonials-heading {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.testimonial-card {
+  border: 1px solid var(--light-gray);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-quote {
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.testimonial-author {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* Repair Request Form Section */
+.repair-request-section {
+  background-color: var(--accent-color);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.repair-request-heading {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.repair-request-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
+}
+
+.form-input,
+.form-textarea {
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.form-button {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.form-button:hover {
+  opacity: 0.9;
+}
+
+.form-validation-message {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: -0.75rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  width: 100%;
+}
+
+/* Footer */
+.footer {
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.footer-links {
+  margin-bottom: 1rem;
+}
+
+.footer-link {
+  margin: 0 0.5rem;
+  color: #6c757d;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design (Basic) */
+@media (max-width: 768px) {
+  .services-section,
+  .why-choose-us-section {
+    grid-template-columns: 1fr; /* Stack service cards on smaller screens */
+  }
+}

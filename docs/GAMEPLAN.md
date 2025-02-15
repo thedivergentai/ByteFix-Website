@@ -14,10 +14,10 @@ This document outlines the steps to update the Gatsby website "ByteFix-Website" 
         *   Primary: `#0D6EFD` (Bright Blue)
         *   Secondary: `#212529` (Dark Gray)
         *   Accent: `#F8F9FA` (Light Gray)
-    *   The `src/pages/index.js` file now includes inline styles for the color palette.
+    *   The `src/styles/global.css` file now includes CSS classes for the color palette.
 *   **Typography:**
     *   Import the Montserrat (Bold) and Roboto (Regular) fonts into the project using the `gatsby-plugin-google-fonts` plugin in `gatsby-config.js`.
-    *   The `src/pages/index.js` file now uses the Montserrat and Roboto fonts in the inline styles.
+    *   The `src/styles/global.css` file now includes CSS classes for the typography.
 *   **Logo:**
     *   Replace the placeholder "ByteFix Logo" text in the hero section with the actual ByteFix logo image.  (This is a manual step for the user).
 *   **Imagery & Visual Elements:**
@@ -27,22 +27,21 @@ This document outlines the steps to update the Gatsby website "ByteFix-Website" 
 ## 3. Content Update
 
 *   **Homepage Content:**
-    *   The `src/pages/index.js` file now includes placeholder content for the hero section, services section, "Why Choose Us?" section, testimonials section, and repair request form section.
-    *   Rewrite the headline to be benefit-driven and solution-focused (e.g., "Get Your Devices Fixed—Fast & Hassle-Free").
-    *   Update the body text to use clear, concise language and avoid technical jargon.
-    *   Update the call-to-action (CTA) button text to be action-oriented (e.g., "Request a Repair").
+    *   The `src/pages/index.js` file now includes content for the hero section, services section, "Why Choose Us?" section, testimonials section, and repair request form section.
+    *   The content has been updated to be benefit-driven and solution-focused, using clear and concise language.
 *   **Other Pages (if any):**
     *   Update the content on any other existing pages (e.g., "About Us," "Services," "Contact") to align with the brand guidelines. (This is a manual step for the user).
 
 ## 4. Website User Experience (UX) & Functionality
 
 *   **Navigation:**
-    *   Ensure the navigation is clear and concise, with labels like "Home," "Services," "Why Choose Us," "Testimonials," and "Request a Repair" (or "Contact"). (This is a manual step for the user).
+    *   A `Header` component has been created and added to `src/pages/index.js` with navigation links.
+    *   The navigation links point to the different sections of the landing page.
     *   Consider implementing a sticky header for easy navigation access on all pages. (This is a manual step for the user).
 *   **Hero Section:**
     *   Implement a high-quality background image of a technician repairing a laptop. (This is a manual step for the user).
     *   Ensure the headline and CTA are the most prominent elements.
-    *   Consider adding a smooth scroll animation to the repair form section. (This is a manual step for the user).
+    *   The "Request a Repair" button now scrolls smoothly to the repair form section.
 *   **Our Services Section:**
     *   Use clear and recognizable icons for each service. (This is a manual step for the user).
     *   Provide concise service descriptions.

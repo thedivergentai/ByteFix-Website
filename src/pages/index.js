@@ -1,5 +1,7 @@
 import * as React from "react"
 import { motion } from "motion/react"
+import Header from "../components/Header"
+import '../styles/global.css';
 
 const IndexPage = () => {
   const scrollToRepairForm = () => {
@@ -10,25 +12,26 @@ const IndexPage = () => {
   };
 
   return (
-    <div style={{ fontFamily: 'Roboto, sans-serif', color: '#212529' }}>
+    <div >
+      <Header />
       {/* Hero Section */}
-      <section style={{ backgroundColor: '#F8F9FA', padding: '4rem 2rem', textAlign: 'center' }}>
+      <section className="hero-section">
         <motion.h1
-          style={{ color: '#0D6EFD', fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold', fontSize: '3rem', marginBottom: '1rem' }}
+          className="hero-heading"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0, transition: { duration: 0.7 } }}
         >
           ByteFix
         </motion.h1>
         <motion.p
-          style={{ fontSize: '1.2rem', lineHeight: '1.6', marginBottom: '2rem' }}
+          className="hero-subheading"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { duration: 0.7, delay: 0.2 } }}
         >
           Get Your Devices Fixed—Fast & Hassle-Free. Reliable tech solutions, simplified.
         </motion.p>
         <motion.button
-          style={{ backgroundColor: '#0D6EFD', color: '#fff', padding: '1rem 2rem', borderRadius: '4px', border: 'none', cursor: 'pointer', fontSize: '1.1rem' }}
+          className="hero-button"
           whileHover={{ scale: 1.05 }}
           onClick={scrollToRepairForm}
           initial={{ opacity: 0, scale: 0.8 }}
@@ -39,109 +42,117 @@ const IndexPage = () => {
       </section>
 
       {/* Services Section */}
-      <section style={{ padding: '3rem 2rem' }}>
-        <h2 style={{ color: '#0D6EFD', fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold', fontSize: '2rem', textAlign: 'center', marginBottom: '2rem' }}>
+      <section className="services-section">
+        <h2 className="services-heading">
           Our Services
         </h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
           {/* Service Card 1 */}
           <motion.div
-            style={{ border: '1px solid #E9ECEF', borderRadius: '8px', padding: '1.5rem', textAlign: 'center' }}
+            className="service-card"
             whileHover={{ scale: 1.05, boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)' }}
           >
-            <p style={{ fontSize: '2rem', marginBottom: '1rem' }}>💻</p> {/* Placeholder Icon */}
-            <h3 style={{ color: '#0D6EFD', fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold', fontSize: '1.5rem', marginBottom: '0.5rem' }}>Laptop Repair</h3>
-            <p style={{ fontSize: '1rem', lineHeight: '1.6' }}>Placeholder service description.  Focus on benefits like speed and reliability.</p>
+            <p className="service-icon">💻</p> {/* Placeholder Icon */}
+            <h3 className="service-title">Laptop Repair</h3>
+            <p className="service-description">Fast and reliable laptop repair services.</p>
           </motion.div>
           {/* Service Card 2 */}
           <motion.div
-            style={{ border: '1px solid #E9ECEF', borderRadius: '8px', padding: '1.5rem', textAlign: 'center' }}
+            className="service-card"
             whileHover={{ scale: 1.05, boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)' }}
           >
-            <p style={{ fontSize: '2rem', marginBottom: '1rem' }}>🦠</p> {/* Placeholder Icon */}
-            <h3 style={{ color: '#0D6EFD', fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold', fontSize: '1.5rem', marginBottom: '0.5rem' }}>Virus Removal</h3>
-            <p style={{ fontSize: '1rem', lineHeight: '1.6' }}>Placeholder service description. Focus on benefits like security and peace of mind.</p>
+            <p className="service-icon">🦠</p> {/* Placeholder Icon */}
+            <h3 className="service-title">Virus Removal</h3>
+            <p className="service-description">Protect your computer from viruses and malware.</p>
           </motion.div>
           {/* Service Card 3 */}
           <motion.div
-            style={{ border: '1px solid #E9ECEF', borderRadius: '8px', padding: '1.5rem', textAlign: 'center' }}
+            className="service-card"
             whileHover={{ scale: 1.05, boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)' }}
           >
-            <p style={{ fontSize: '2rem', marginBottom: '1rem' }}>💾</p> {/* Placeholder Icon */}
-            <h3 style={{ color: '#0D6EFD', fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold', fontSize: '1.5rem', marginBottom: '0.5rem' }}>Data Recovery</h3>
-            <p style={{ fontSize: '1rem', lineHeight: '1.6' }}>Placeholder service description. Focus on benefits like data safety and recovery.</p>
+            <p className="service-icon">💾</p> {/* Placeholder Icon */}
+            <h3 className="service-title">Data Recovery</h3>
+            <p className="service-description">Recover lost data from damaged devices.</p>
           </motion.div>
           {/* Service Card 4 */}
           <motion.div
-            style={{ border: '1px solid #E9ECEF', borderRadius: '8px', padding: '1.5rem', textAlign: 'center' }}
+            className="service-card"
             whileHover={{ scale: 1.05, boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)' }}
           >
-            <p style={{ fontSize: '2rem', marginBottom: '1rem' }}>⚙️</p> {/* Placeholder Icon */}
-            <h3 style={{ color: '#0D6EFD', fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold', fontSize: '1.5rem', marginBottom: '0.5rem' }}>Hardware Upgrades</h3>
-            <p style={{ fontSize: '1rem', lineHeight: '1.6' }}>Placeholder service description. Focus on benefits like performance and efficiency.</p>
+            <p className="service-icon">⚙️</p> {/* Placeholder Icon */}
+            <h3 className="service-title">Hardware Upgrades</h3>
+            <p className="service-description">Upgrade your computer hardware for better performance.</p>
           </motion.div>
         </div>
       </section>
 
       {/* Why Choose Us? Section */}
-      <section style={{ backgroundColor: '#F8F9FA', padding: '3rem 2rem', textAlign: 'center' }}>
-        <h2 style={{ color: '#0D6EFD', fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold', fontSize: '2rem', marginBottom: '2rem' }}>
+      <section className="why-choose-us-section">
+        <h2 className="why-choose-us-heading">
           Why Choose Us?
         </h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
           {/* Benefit 1 */}
-          <div>
-            <h3 style={{ color: '#0D6EFD', fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold', fontSize: '1.5rem', marginBottom: '0.5rem' }}>Quick Turnaround</h3>
-            <p style={{ fontSize: '1rem', lineHeight: '1.6' }}>Placeholder benefit description. Emphasize speed and efficiency.</p>
+          <div className="why-choose-us-benefit">
+            <h3 className="why-choose-us-title">Quick Turnaround</h3>
+            <p className="why-choose-us-description">Get your device back in working order fast.</p>
           </div>
           {/* Benefit 2 */}
-          <div>
-            <h3 style={{ color: '#0D6EFD', fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold', fontSize: '1.5rem', marginBottom: '0.5rem' }}>Affordable Pricing</h3>
-            <p style={{ fontSize: '1rem', lineHeight: '1.6' }}>Placeholder benefit description. Emphasize value and cost-effectiveness.</p>
+          <div className="why-choose-us-benefit">
+            <h3 className="why-choose-us-title">Affordable Pricing</h3>
+            <p className="why-choose-us-description">High-quality repairs at competitive prices.</p>
           </div>
           {/* Benefit 3 */}
-          <div>
-            <h3 style={{ color: '#0D6EFD', fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold', fontSize: '1.5rem', marginBottom: '0.5rem' }}>Certified Technicians</h3>
-            <p style={{ fontSize: '1rem', lineHeight: '1.6' }}>Placeholder benefit description. Emphasize expertise and reliability.</p>
+          <div className="why-choose-us-benefit">
+            <h3 className="why-choose-us-title">Certified Technicians</h3>
+            <p className="why-choose-us-description">Trust our skilled and certified technicians.</p>
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section style={{ padding: '3rem 2rem', textAlign: 'center' }}>
-        <h2 style={{ color: '#0D6EFD', fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold', fontSize: '2rem', marginBottom: '2rem' }}>
+      <section className="testimonials-section">
+        <h2 className="testimonials-heading">
           What Our Customers Say
         </h2>
         {/* Placeholder Testimonial */}
-        <div style={{ border: '1px solid #E9ECEF', borderRadius: '8px', padding: '1.5rem', marginBottom: '1.5rem' }}>
-          <p style={{ fontSize: '1.1rem', fontStyle: 'italic', lineHeight: '1.6', marginBottom: '1rem' }}>"Placeholder testimonial quote. Emphasize speed, reliability, and helpfulness."</p>
-          <p style={{ fontSize: '0.9rem', fontWeight: 'bold' }}>- Customer Name, Star Rating</p>
+        <div className="testimonial-card">
+          <p className="testimonial-quote">"Great service! They fixed my laptop quickly and efficiently."</p>
+          <p className="testimonial-author">- John Doe, 5 stars</p>
+        </div>
+        <div className="testimonial-card">
+          <p className="testimonial-quote">"I was impressed with their professionalism and expertise."</p>
+          <p className="testimonial-author">- Jane Smith, 5 stars</p>
+        </div>
+        <div className="testimonial-card">
+          <p className="testimonial-quote">"Highly recommend ByteFix for all your tech repair needs!"</p>
+          <p className="testimonial-author">- Peter Jones, 5 stars</p>
         </div>
       </section>
 
       {/* Repair Request Form Section */}
-      <section id="repair-form" style={{ backgroundColor: '#F8F9FA', padding: '3rem 2rem', textAlign: 'center' }}>
-        <h2 style={{ color: '#0D6EFD', fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold', fontSize: '2rem', marginBottom: '2rem' }}>
+      <section id="repair-form" className="repair-request-section">
+        <h2 className="repair-request-heading">
           Request a Repair
         </h2>
-        <form style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', maxWidth: '400px', margin: '0 auto' }}>
-          <label htmlFor="name" style={{ marginBottom: '0.5rem', fontWeight: 'bold', textAlign: 'left', width: '100%' }}>Name:</label>
-          <input type="text" id="name" name="name" style={{ padding: '0.75rem', marginBottom: '1rem', border: '1px solid #ccc', borderRadius: '4px', width: '100%' }} />
+        <form className="repair-request-form">
+          <label htmlFor="name" className="form-label">Name:</label>
+          <input type="text" id="name" name="name" className="form-input" />
 
-          <label htmlFor="email" style={{ marginBottom: '0.5rem', fontWeight: 'bold', textAlign: 'left', width: '100%' }}>Email:</label>
-          <input type="email" id="email" name="email" style={{ padding: '0.75rem', marginBottom: '1rem', border: '1px solid #ccc', borderRadius: '4px', width: '100%' }} />
+          <label htmlFor="email" className="form-label">Email:</label>
+          <input type="email" id="email" name="email" className="form-input" />
 
-          <label htmlFor="issue" style={{ marginBottom: '0.5rem', fontWeight: 'bold', textAlign: 'left', width: '100%' }}>Device Issue:</label>
-          <textarea id="issue" name="issue" rows="4" style={{ padding: '0.75rem', marginBottom: '1rem', border: '1px solid #ccc', borderRadius: '4px', width: '100%' }}></textarea>
+          <label htmlFor="issue" className="form-label">Device Issue:</label>
+          <textarea id="issue" name="issue" rows="4" className="form-textarea"></textarea>
 
-          <button type="submit" style={{ backgroundColor: '#0D6EFD', color: '#fff', padding: '1rem 2rem', borderRadius: '4px', border: 'none', cursor: 'pointer', fontSize: '1.1rem' }}>
+          <button type="submit" className="form-button">
             Submit Request
           </button>
         </form>
       </section>
 
       {/* Footer */}
-      <footer style={{ padding: '2rem', textAlign: 'center', fontSize: '0.9rem', color: '#6c757d' }}>
+      <footer className="footer">
         <p>© {new Date().getFullYear()} ByteFix. All rights reserved.</p>
         {/* Placeholder for social media links and WhatsApp link */}
       </footer>

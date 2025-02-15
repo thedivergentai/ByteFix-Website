@@ -22,6 +22,27 @@ const HeroSection = () => {
     },
   };
 
+  const heroButtonVariants = {
+    ...buttonVariants,
+    initial: { opacity: 0 },
+    fadeIn: {
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+        delay: 0.4,
+        onComplete: () => {
+          setButtonAnimationState('loop');
+        }
+      }
+    },
+    loop: {
+      ...buttonAnimation,
+      opacity: 1,
+    }
+  };
+
+  const [buttonAnimationState, setButtonAnimationState] = React.useState('fadeIn');
+
   const scrollToRepairForm = () => {
     const repairFormSection = document.getElementById('repair-form');
     if (repairFormSection) {
@@ -47,16 +68,12 @@ const HeroSection = () => {
       </motion.p>
       <motion.button
         className="hero-button"
-        variants={buttonVariants}
         whileHover="hover"
         whileTap="tap"
-        onClick={() => {
-          const repairFormSection = document.getElementById('repair-form');
-          if (repairFormSection) {
-            repairFormSection.scrollIntoView({ behavior: 'smooth' });
-          }
-        }}
-        animate={ buttonAnimation }
+        initial="initial" // Start with the 'initial' variant (opacity: 0)
+        animate={buttonAnimationState} // Control animation with state
+        variants={heroButtonVariants} // Apply the animation variants
+        onClick={scrollToRepairForm}
       >
         Request a Repair
       </motion.button>

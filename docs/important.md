@@ -4,11 +4,12 @@ This document summarizes the key rules and guidelines to follow for the ByteFix 
 
 ## General Instructions
 
-*   **Use WRITE_TO_FILE over REPLACE_IN_FILE:** Prefer using the `write_to_file` tool instead of `replace_in_file` for file modifications.
+*   **Use WRITE_TO_FILE for Consolidated Changes:**  To minimize API usage, consolidate all necessary file modifications into a single `write_to_file` operation whenever feasible. Avoid making frequent, small changes.
 *   **UTF-8 Encoding:** Ensure all files are encoded in UTF-8.
 *   **Windows PowerShell Syntax:** Use Windows PowerShell syntax (`;` for command chaining) for CLI commands.
 *   **Detailed Commit Messages:** Create detailed and descriptive commit messages for all Git commits.
 *   **Push Changes:** Always commit and push changes to the remote repository after completing a set of tasks.
+*   **Navigate to Project Directory:** Before executing Git commands, ensure you are in the project directory (`ByteFix-Website`).
 
 ## Visual Identity & Styling
 
@@ -31,6 +32,7 @@ This document summarizes the key rules and guidelines to follow for the ByteFix 
 *   **Repair Request Form:** Implement a basic repair request form with client-side validation.
 *   **Layout Component:** Use a `Layout` component (`src/components/Layout.js`) as the main container for the page structure, housing all sections and importing `global.css`. `index.js` should only call the `Layout` component.
 *   **Component Separation:** Separate the landing page into distinct components (Header, HeroSection, ServicesSection, WhyChooseUsSection, TestimonialsSection, RepairRequestFormSection, FooterSection) for better code organization.
+*   **Gatsby `<Link>` Component:**  Always use Gatsby's `<Link>` component for internal navigation instead of standard `<a>` tags. This ensures proper client-side routing and improves website performance in Gatsby projects.
 
 ## Special Characters
 
@@ -39,3 +41,4 @@ This document summarizes the key rules and guidelines to follow for the ByteFix 
 ## Implementation Focus
 
 *   **Implement All Possible Features:** Strive to implement all requested features and improvements. Avoid leaving manual steps for the user for tasks that can be automated or implemented programmatically.
+*   **Consolidate File Modifications:** To minimize API usage, consolidate all file modifications into single `write_to_file` operations where possible.

@@ -23,13 +23,13 @@ const Header = () => {
             <Link to="/" className="header-link">Home</Link>
           </li>
           <li>
-            <a href="#services" onClick={() => handleScroll('services')} className="header-link">Services</a>
+            <Link to="/#services" className="header-link" onClick={() => handleScroll('services')}>Services</Link>
           </li>
           <li>
-            <a href="#why-choose-us" onClick={() => handleScroll('why-choose-us')} className="header-link">Why Choose Us</a>
+            <Link to="/#why-choose-us" className="header-link" onClick={() => handleScroll('why-choose-us')}>Why Choose Us</Link>
           </li>
           <li>
-            <a href="#testimonials" onClick={() => handleScroll('testimonials')} className="header-link">Testimonials</a>
+            <Link to="/#testimonials" className="header-link" onClick={() => handleScroll('testimonials')}>Testimonials</Link>
           </li>
           <li>
             <button className="header-button" onClick={() => handleScroll('repair-form')}>

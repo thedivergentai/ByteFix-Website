@@ -43,7 +43,7 @@ const HeroSection = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 0.7, delay: 0.2 } }}
         >
-        🖼️ Get Your Devices Fixed—Fast & Hassle-Free. Reliable tech solutions, simplified.
+        Reliable Tech Solutions, Simplified.
       </motion.p>
       <motion.button
         className="hero-button"

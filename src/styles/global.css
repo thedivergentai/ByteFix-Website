@@ -126,34 +126,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 2rem;
 }
 
-.service-card {
-  border: 1px solid var(--light-gray);
-  border-radius: 8px;
-  padding: 1.5rem;
-  text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  margin-bottom: 1.5rem; /* Add margin for spacing */
-}
-
-.service-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.service-icon {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.service-title {
-  color: var(--primary-color);
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.service-description {
-  font-size: 1rem;
-  line-height: 1.6;
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns on larger screens */
+  gap: 1.5rem;
 }
 
 /* Why Choose Us Section */
@@ -170,24 +146,18 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 2rem;
 }
 
-.why-choose-us-benefit {
-  margin-bottom: 1.5rem;
+.why-choose-us-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+  gap: 1.5rem;
 }
 
-.why-choose-us-icon {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.why-choose-us-title {
-  color: var(--accent-color); /* Use accent color */
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.why-choose-us-description {
-  font-size: 1rem;
-  line-height: 1.6;
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .services-grid,
+  .why-choose-us-grid {
+    grid-template-columns: 1fr; /* Stack items on smaller screens */
+  }
 }
 
 /* Testimonials Section */
@@ -203,23 +173,51 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 2rem;
 }
 
+.testimonial-carousel-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 800px; /* Adjust as needed */
+  margin: 0 auto; /* Center the carousel */
+}
+
+.testimonial-carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%; /* Ensure the carousel takes up the full container width */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 1rem;
+}
+
 .testimonial-card {
-  border: 1px solid var(--light-gray);
-  border-radius: 8px;
+  flex: 0 0 100%;
+  min-width: 100%;
   padding: 1.5rem;
-  margin-bottom: 1.5rem;
+  box-sizing: border-box;
+  scroll-snap-align: start;
 }
 
-.testimonial-quote {
-  font-size: 1.1rem;
-  font-style: italic;
-  line-height: 1.6;
-  margin-bottom: 1rem;
+.testimonial-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  z-index: 10;
 }
 
-.testimonial-author {
-  font-size: 0.9rem;
-  font-weight: bold;
+.testimonial-button-prev {
+  left: 0.5rem;
+}
+
+.testimonial-button-next {
+  right: 0.5rem;
 }
 
 /* Repair Request Form Section */
@@ -294,92 +292,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-links {
   margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-link {
-  margin: 0 0.5rem;
-  color: #6c757d;
+  color: var(--accent-color);
+  margin: 0 1rem;
   text-decoration: none;
 }
 
 .footer-link:hover {
   text-decoration: underline;
-}
-
-/* Responsive Design (Basic) */
-@media (max-width: 768px) {
-  .services-section,
-  .why-choose-us-section {
-    grid-template-columns: 1fr; /* Stack service cards on smaller screens */
-  }
-}
-
-/* Confirmation Popup */
-.confirmation-popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000; /* Ensure it's on top */
-}
-
-.confirmation-popup-content {
-  background-color: var(--accent-color);
-  padding: 2rem;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.confirmation-popup-heading {
-  color: var(--primary-color);
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-/* Header Styles */
-.header-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header-logo {
-  color: var(--primary-color);
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  font-size: 1.5rem;
-  text-decoration: none;
-}
-
-.header-links {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  align-items: center; /* Vertically center the links */
-}
-
-.header-links li {
-  margin-left: 1rem;
-}
-
-.header-link {
-  color: var(--text-color);
-  text-decoration: none;
-}
-
-.header-button {
-  color: #fff;
-  background-color: var(--primary-color);
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 1rem;
 }

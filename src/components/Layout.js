@@ -8,7 +8,7 @@ import TestimonialsSection from "./TestimonialsSection";
 import RepairRequestFormSection from "./RepairRequestFormSection";
 import '../styles/global.css';
 
-const Layout = () => {
+const Layout = ({ formValues, formErrors, handleChange, handleSubmit }) => {
 
   return (
     <div className="layout-container">
@@ -18,7 +18,12 @@ const Layout = () => {
         <ServicesSection />
         <WhyChooseUsSection />
         <TestimonialsSection />
-        <RepairRequestFormSection />
+        <RepairRequestFormSection
+          formValues={formValues}
+          formErrors={formErrors}
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+        />
       </main>
       <FooterSection />
     </div>

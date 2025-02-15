@@ -41,17 +41,10 @@ const IndexPage = () => {
     return errors;
   };
 
-  const scrollToRepairForm = () => {
-    const repairFormSection = document.getElementById('repair-form');
-    if (repairFormSection) {
-      repairFormSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <div>
       <Header />
-      <HeroSection scrollToRepairForm={scrollToRepairForm} />
+      <HeroSection />
       <ServicesSection />
       <WhyChooseUsSection />
       <TestimonialsSection />

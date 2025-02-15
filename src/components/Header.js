@@ -1,31 +1,41 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import '../styles/global.css'; // Import the global styles
+import '../styles/global.css';
 
 const Header = () => {
+  const handleScroll = (e, targetId) => {
+    e.preventDefault();
+    const target = document.getElementById(targetId);
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <header className="header">
-      <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <Link to="/" style={{ color: '#0D6EFD', fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold', fontSize: '1.5rem', textDecoration: 'none' }}>
+      <nav className="header-nav">
+        <Link to="/" className="header-logo">
           💻 ByteFix
         </Link>
-        <ul style={{ display: 'flex', listStyle: 'none', margin: 0, padding: 0 }}>
-          <li style={{ marginLeft: '1rem' }}>
-            <Link to="/" style={{ color: '#212529', textDecoration: 'none' }}>Home</Link>
+        <ul className="header-links">
+          <li>
+            <a href="/" className="header-link">Home</a>
           </li>
-          <li style={{ marginLeft: '1rem' }}>
-            <Link to="/#services" style={{ color: '#212529', textDecoration: 'none' }}>Services</Link>
+          <li>
+            <a href="/#services" onClick={(e) => handleScroll(e, 'services')} className="header-link">Services</a>
           </li>
-          <li style={{ marginLeft: '1rem' }}>
-            <Link to="/#why-choose-us" style={{ color: '#212529', textDecoration: 'none' }}>Why Choose Us</Link>
+          <li>
+            <a href="/#why-choose-us" onClick={(e) => handleScroll(e, 'why-choose-us')} className="header-link">Why Choose Us</a>
           </li>
-          <li style={{ marginLeft: '1rem' }}>
-            <Link to="/#testimonials" style={{ color: '#212529', textDecoration: 'none' }}>Testimonials</Link>
+          <li>
+            <a href="/#testimonials" onClick={(e) => handleScroll(e, 'testimonials')} className="header-link">Testimonials</a>
           </li>
-          <li style={{ marginLeft: '1rem' }}>
-            <Link to="/#repair-form" style={{ color: '#212529', textDecoration: 'none' }}>
-              <button style={{ color: '#fff', background: '#0D6EFD', border: 'none', padding: '0.5rem 1rem', cursor: 'pointer', borderRadius: '5px' }}>Request a Repair</button>
-            </Link>
+          <li>
+            <button className="header-button" onClick={(e) => handleScroll(e, 'repair-form')}>
+              Request a Repair
+            </button>
           </li>
         </ul>
       </nav>

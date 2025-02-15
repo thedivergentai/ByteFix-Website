@@ -138,3 +138,4 @@ This document outlines the steps to update the Gatsby website "ByteFix-Website" 
 *   The main sections of the landing page have been split into separate components.
 *   The hero section button has a grow/shrink animation and a hover effect.
 *   The "Request a Repair" link in the header is now a button.
+*   Smooth scrolling has been implemented for all header links and the hero section button.

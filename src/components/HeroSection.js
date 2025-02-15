@@ -1,7 +1,7 @@
 import React from "react";
-import { motion } from "motion/react";
+import { motion, animate } from "motion/react";
 
-const HeroSection = ({ scrollToRepairForm }) => {
+const HeroSection = () => {
   const buttonVariants = {
     hover: {
       scale: 1.1,
@@ -20,6 +20,13 @@ const HeroSection = ({ scrollToRepairForm }) => {
       yoyo: Infinity,
       ease: "easeInOut",
     },
+  };
+
+  const scrollToRepairForm = () => {
+    const repairFormSection = document.getElementById('repair-form');
+    if (repairFormSection) {
+      repairFormSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -47,7 +54,7 @@ const HeroSection = ({ scrollToRepairForm }) => {
         style={{
           border: "2px solid transparent",
         }}
-        animate={buttonAnimation}
+        animate={ buttonAnimation }
       >
         Request a Repair
       </motion.button>

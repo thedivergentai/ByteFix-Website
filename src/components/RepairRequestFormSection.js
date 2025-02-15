@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
+import ConfirmationPopup from "./ConfirmationPopup";
 
-const RepairRequestFormSection = ({ formValues, formErrors, handleChange, handleSubmit, validate }) => {
+const RepairRequestFormSection = ({ formValues, formErrors, handleChange, handleSubmit }) => {
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
+
+  const handleFormSubmit = (e) => {
+    handleSubmit(e);
+    setIsPopupVisible(true);
+  };
+
+  const handleClosePopup = () => {
+    setIsPopupVisible(false);
+  };
+
   return (
     <section id="repair-form" className="repair-request-section">
       <h2 className="repair-request-heading">
         Request a Repair
       </h2>
-      <form className="repair-request-form" onSubmit={handleSubmit}>
+      <form className="repair-request-form" onSubmit={handleFormSubmit}>
         <label htmlFor="name" className="form-label">Name:</label>
         <input
           type="text"
@@ -31,19 +43,21 @@ const RepairRequestFormSection = ({ formValues, formErrors, handleChange, handle
 
         <label htmlFor="issue" className="form-label">Device Issue:</label>
         <textarea
+          type="text"
           id="issue"
           name="issue"
           rows="4"
           className="form-textarea"
           value={formValues.issue}
           onChange={handleChange}
-        ></textarea>
+        />
         {formErrors.issue && <p className="form-validation-message">{formErrors.issue}</p>}
 
         <button type="submit" className="form-button">
           Submit Request
         </button>
       </form>
+      {isPopupVisible && <ConfirmationPopup onClose={handleClosePopup} />}
     </section>
   );
 };

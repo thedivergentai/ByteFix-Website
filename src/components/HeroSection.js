@@ -17,7 +17,7 @@ const HeroSection = () => {
     scale: [1, 1.1, 1],
     transition: {
       duration: 2,
-      yoyo: Infinity,
+      repeat: Infinity,
       ease: "easeInOut",
     },
   };

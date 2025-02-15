@@ -173,51 +173,41 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 2rem;
 }
 
-.testimonial-carousel-container {
-  position: relative;
-  overflow: hidden;
-  max-width: 800px; /* Adjust as needed */
-  margin: 0 auto; /* Center the carousel */
-}
-
-.testimonial-carousel {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 100%; /* Ensure the carousel takes up the full container width */
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  padding-bottom: 1rem;
+.testimonial-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex; /* Display testimonials in a row */
+  justify-content: space-around; /* Space them evenly */
 }
 
 .testimonial-card {
-  flex: 0 0 100%;
-  min-width: 100%;
+  margin-bottom: 2rem;
   padding: 1.5rem;
   box-sizing: border-box;
-  scroll-snap-align: start;
-}
-
-.testimonial-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
+  text-align: left;
+  border: 1px solid var(--light-gray);
   border-radius: 5px;
-  font-size: 1rem;
-  z-index: 10;
+  width: 30%; /* Take up 30% of the container width */
 }
 
-.testimonial-button-prev {
-  left: 0.5rem;
+.testimonial-image {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
 }
 
-.testimonial-button-next {
-  right: 0.5rem;
+.testimonial-content {
+  padding: 0 1rem;
+}
+
+.testimonial-quote {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-author {
+  font-weight: bold;
 }
 
 /* Repair Request Form Section */

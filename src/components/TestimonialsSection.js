@@ -51,46 +51,48 @@ const TestimonialsSection = () => {
 
   return (
     <section className="testimonials-section">
-      <h2 className="testimonials-heading">
-        What Our Customers Say
-      </h2>
-      <div className="testimonials-carousel-container">
-        <button
-          className="testimonial-nav-button testimonial-nav-left"
-          onClick={goToPreviousTestimonial}
-          onMouseEnter={() => setIsLeftChevronHovered(true)}
-          onMouseLeave={() => setIsLeftChevronHovered(false)}
-        >
-          <FontAwesomeIcon icon={faChevronLeft} />
-        </button>
-
-        <div className="testimonial-container" ref={containerRef}>
-          <motion.div
-            key={currentTestimonialIndex}
-            initial={{ opacity: 0, x: 200 * animationDirection }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -200 * animationDirection }}
-            transition={{ duration: 0.5 }}
-            className="testimonial-card"
+      <div className="testimonials-content">
+        <h2 className="testimonials-heading">
+          What Our Customers Say
+        </h2>
+        <div className="testimonials-carousel-container">
+          <button
+            className="testimonial-nav-button testimonial-nav-left"
+            onClick={goToPreviousTestimonial}
+            onMouseEnter={() => setIsLeftChevronHovered(true)}
+            onMouseLeave={() => setIsLeftChevronHovered(false)}
           >
-            <span className="testimonial-image" style={{ minHeight: '200px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-              <FontAwesomeIcon icon={faUser} style={{fontSize: '5rem'}} />
-            </span>
-            <div className="testimonial-content">
-              <p className="testimonial-quote">"{testimonials[currentTestimonialIndex].quote}"</p>
-              <p className="testimonial-author">- {testimonials[currentTestimonialIndex].author}</p>
-            </div>
-          </motion.div>
-        </div>
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </button>
 
-        <button
-          className="testimonial-nav-button testimonial-nav-right"
-          onClick={goToNextTestimonial}
-          onMouseEnter={() => setIsRightChevronHovered(true)}
-          onMouseLeave={() => setIsRightChevronHovered(false)}
-        >
-          <FontAwesomeIcon icon={faChevronRight} />
-        </button>
+          <div className="testimonial-container" ref={containerRef}>
+            <motion.div
+              key={currentTestimonialIndex}
+              initial={{ opacity: 0, x: 200 * animationDirection }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -200 * animationDirection }}
+              transition={{ duration: 0.5 }}
+              className="testimonial-card"
+            >
+              <span className="testimonial-image" style={{ minHeight: '200px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <FontAwesomeIcon icon={faUser} style={{fontSize: '5rem'}} />
+              </span>
+              <div className="testimonial-content">
+                <p className="testimonial-quote">"{testimonials[currentTestimonialIndex].quote}"</p>
+                <p className="testimonial-author">- {testimonials[currentTestimonialIndex].author}</p>
+              </div>
+            </motion.div>
+          </div>
+
+          <button
+            className="testimonial-nav-button testimonial-nav-right"
+            onClick={goToNextTestimonial}
+            onMouseEnter={() => setIsRightChevronHovered(true)}
+            onMouseLeave={() => setIsRightChevronHovered(false)}
+          >
+            <FontAwesomeIcon icon={faChevronRight} />
+          </button>
+        </div>
       </div>
     </section>
   );

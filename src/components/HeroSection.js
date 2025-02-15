@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, animate } from "motion/react";
+import { motion } from "motion/react";
 
 const HeroSection = () => {
   const buttonVariants = {
@@ -52,31 +52,33 @@ const HeroSection = () => {
 
   return (
     <section className="hero-section">
-      <motion.h1
-        className="hero-heading"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0, transition: { duration: 0.7 } }}
-      >
-        ByteFix
-      </motion.h1>
-      <motion.p
-        className="hero-subheading"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { duration: 0.7, delay: 0.2 } }}
+      <div className="hero-content">
+        <motion.h1
+          className="hero-heading"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0, transition: { duration: 0.7 } }}
         >
-        Reliable Tech Solutions, Simplified.
-      </motion.p>
-      <motion.button
-        className="hero-button"
-        whileHover="hover"
-        whileTap="tap"
-        initial="initial" // Start with the 'initial' variant (opacity: 0)
-        animate={buttonAnimationState} // Control animation with state
-        variants={heroButtonVariants} // Apply the animation variants
-        onClick={scrollToRepairForm}
-      >
-        Request a Repair
-      </motion.button>
+          ByteFix
+        </motion.h1>
+        <motion.p
+          className="hero-subheading"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, transition: { duration: 0.7, delay: 0.2 } }}
+          >
+          Reliable Tech Solutions, Simplified.
+        </motion.p>
+        <motion.button
+          className="hero-button"
+          whileHover="hover"
+          whileTap="tap"
+          initial="initial" // Start with the 'initial' variant (opacity: 0)
+          animate={buttonAnimationState} // Control animation with state
+          variants={heroButtonVariants} // Apply the animation variants
+          onClick={scrollToRepairForm}
+        >
+          Request a Repair
+        </motion.button>
+      </div>
     </section>
   );
 };

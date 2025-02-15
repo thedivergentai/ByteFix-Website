@@ -13,7 +13,7 @@ const Layout = ({ formValues, formErrors, handleChange, handleSubmit }) => {
   return (
     <div className="layout-container">
       <Header />
-      <main className="layout-content">
+      <main>
         <HeroSection />
         <ServicesSection />
         <WhyChooseUsSection />

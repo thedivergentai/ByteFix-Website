@@ -2,6 +2,7 @@
 
 /* Color Palette */
 :root {
+  --max-content-width: 1200px;
   --primary-color: #0D6EFD;
   --primary-color-light: #A7D1FF; /* Lighter shade of primary */
   --primary-color-dark: #003399; /* Darker shade of primary */
@@ -30,6 +31,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Header */
 .header {
+  width: 100%;
   background-color: var(--accent-color);
   padding: 1rem 2rem;
   border-bottom: 1px solid var(--light-gray);
@@ -60,10 +62,6 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
 }
 
-.header-links li {
-  margin-left: 1rem;
-}
-
 .header-link {
   color: var(--text-color);
   text-decoration: none;
@@ -79,8 +77,14 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1rem;
 }
 
+.header-content {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+}
+
 /* Hero Section */
 .hero-section {
+  width: 100%;
   background-color: var(--primary-color-light); /* Use a lighter shade of blue */
   padding: 4rem 2rem;
   text-align: center;
@@ -113,8 +117,14 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(1.05);
 }
 
+.hero-content {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+}
+
 /* Services Section */
 .services-section {
+  width: 100%;
   background-color: var(--accent-color); /* Use accent color */
   padding: 3rem 2rem;
 }
@@ -132,8 +142,14 @@ h1, h2, h3, h4, h5, h6 {
   gap: 1.5rem;
 }
 
+.services-content {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+}
+
 /* Why Choose Us Section */
 .why-choose-us-section {
+  width: 100%;
   background-color: var(--secondary-color-light); /* Use a lighter shade of gray */
   color: #fff; /* Invert text color for contrast */
   padding: 3rem 2rem;
@@ -152,16 +168,14 @@ h1, h2, h3, h4, h5, h6 {
   gap: 1.5rem;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-  .services-grid,
-  .why-choose-us-grid {
-    grid-template-columns: 1fr; /* Stack items on smaller screens */
-  }
+.why-choose-us-content {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
 }
 
 /* Testimonials Section */
 .testimonials-section {
+  width: 100%;
   background-color: var(--accent-color-dark); /* Use a darker shade of accent */
   padding: 3rem 2rem;
   text-align: center;
@@ -256,8 +270,14 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 3rem; /* Increase the size of the chevrons */
 }
 
+.testimonials-content {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+}
+
 /* Repair Request Form Section */
 .repair-request-section {
+  width: 100%;
   background-color: var(--primary-color-dark); /* Use a darker shade of blue */
   color: #fff; /* Invert text color for contrast */
   padding: 3rem 2rem;
@@ -315,6 +335,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5rem;
   text-align: left;
   width: 100%;
+}
+
+.repair-request-content {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
 }
 
 /* Footer */

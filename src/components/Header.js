@@ -15,16 +15,18 @@ const Header = () => {
   return (
     <header className="header">
       <nav className="header-nav">
-        <Link to="/" className="header-logo">
-          💻 ByteFix
-        </Link>
-        <ul className="header-links">
-          <li>
-            <button className="header-button" onClick={() => handleScroll('repair-form')}>
-              Request a Repair
-            </button>
-          </li>
-        </ul>
+        <div className="header-content">
+          <Link to="/" className="header-logo">
+            💻 ByteFix
+          </Link>
+          <ul className="header-links">
+            <li>
+              <button className="header-button" onClick={() => handleScroll('repair-form')}>
+                Request a Repair
+              </button>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
   );

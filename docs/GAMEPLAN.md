@@ -54,6 +54,14 @@ This document outlines the steps to update the Gatsby website "ByteFix-Website" 
 *   **Customer Testimonials Section:**
     *   Use real testimonials from satisfied customers.
     *   A basic carousel has been implemented to display the testimonials.
+    *   Testimonials are now displayed one at a time in a carousel.
+    *   Navigation chevrons are added to the left and right of the carousel for manual switching.
+    *   Implemented smooth transitions using `motion.dev` for carousel animations.
+    *   Carousel transitions direction is dynamic based on chevron clicked.
+    *   Added auto-scrolling to the carousel, transitioning every 5 seconds.
+    *   Auto-scrolling pauses when chevrons are hovered.
+    *   Updated testimonial author to use star emojis instead of "5 stars" text.
+    *   Centered the placeholder user icon and set a minimum height of 200px.
 *   **Repair Request Form Section:**
     *   Keep the form simple and user-friendly.
     *   Implement clear labels and instructions.

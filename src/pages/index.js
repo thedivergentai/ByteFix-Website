@@ -1,8 +1,7 @@
-import * as React from "react"
-import { motion } from "motion/react"
-import Header from "../components/Header"
+import React, { useState, useEffect, useRef } from "react";
+import { motion } from "motion/react";
+import Header from "../components/Header";
 import '../styles/global.css';
-import { useState, useEffect, useRef } from 'react';
 
 const IndexPage = () => {
   const scrollToRepairForm = () => {
@@ -24,7 +23,7 @@ const IndexPage = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 5000); // Change testimonial every 5 seconds
+    }, 5000);
 
     return () => clearInterval(intervalId);
   }, [testimonials.length]);
@@ -41,7 +40,7 @@ const IndexPage = () => {
     const errors = validate(formValues);
     setFormErrors(errors);
     if (Object.keys(errors).length === 0) {
-      alert("Form submitted successfully!"); // Placeholder for actual submission
+      alert("Demo form submitted!");
     }
   };
 
@@ -61,8 +60,16 @@ const IndexPage = () => {
     return errors;
   };
 
+  const nextTestimonial = () => {
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prevTestimonial = () => {
+    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
   return (
-    <div >
+    <div>
       <Header />
       {/* Hero Section */}
       <section className="hero-section">
@@ -165,22 +172,49 @@ const IndexPage = () => {
         <h2 className="testimonials-heading">
           What Our Customers Say
         </h2>
-        <div className="testimonial-carousel" ref={carouselRef} style={{ overflowX: 'auto', whiteSpace: 'nowrap', scrollSnapType: 'x mandatory', paddingBottom: '1rem' }}>
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="testimonial-card"
-              style={{ display: 'inline-block', width: '80%', minWidth: '300px', scrollSnapAlign: 'start', margin: '0 1rem' }}
-            >
-              <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem' }}>
-                <span style={{ fontSize: '3rem', marginRight: '1rem' }}>👤</span> {/* Placeholder Image */}
+        <div style={{ position: 'relative', overflow: 'hidden', maxWidth: '800px', margin: '0 auto' }}>
+          <div
+            className="testimonial-carousel"
+            ref={carouselRef}
+            style={{
+              display: 'flex',
+              transition: 'transform 0.5s ease-in-out',
+              transform: `translateX(-${currentTestimonial * 100}%)`,
+            }}
+          >
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={index}
+                className="testimonial-card"
+                style={{
+                  flexShrink: 0,
+                  width: '100%',
+                  padding: '1.5rem',
+                  boxSizing: 'border-box',
+                  display: 'flex',
+                  alignItems: 'center',
+                }}
+              >
+                <span style={{ fontSize: '4rem', marginRight: '2rem' }}>👤</span> {/* Placeholder Image */}
                 <div>
                   <p className="testimonial-quote">"{testimonial.quote}"</p>
                   <p className="testimonial-author">- {testimonial.author}, {testimonial.rating} stars</p>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          <button
+            style={{ position: 'absolute', top: '50%', left: '0', transform: 'translateY(-50%)', background: 'none', border: 'none', fontSize: '2rem', cursor: 'pointer' }}
+            onClick={prevTestimonial}
+          >
+            &lt;
+          </button>
+          <button
+            style={{ position: 'absolute', top: '50%', right: '0', transform: 'translateY(-50%)', background: 'none', border: 'none', fontSize: '2rem', cursor: 'pointer' }}
+            onClick={nextTestimonial}
+          >
+            &rt;
+          </button>
         </div>
       </section>
 
@@ -235,7 +269,7 @@ const IndexPage = () => {
         {/* Placeholder for social media links and WhatsApp link */}
       </footer>
     </div>
-  )
+  );
 }
 
 export default IndexPage

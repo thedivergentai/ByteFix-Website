@@ -13,9 +13,9 @@ const IndexPage = () => {
   };
 
   const testimonials = [
-    { quote: "Great service! They fixed my laptop quickly and efficiently.", author: "John Doe", rating: 5 },
-    { quote: "I was impressed with their professionalism and expertise.", author: "Jane Smith", rating: 5 },
-    { quote: "Highly recommend ByteFix for all your tech repair needs!", author: "Peter Jones", rating: 5 },
+    { quote: "ByteFix saved my business! My computer crashed, and they recovered all my data in a matter of hours. Highly recommend!", author: "Sarah L.", rating: 5 },
+    { quote: "Excellent service and very knowledgeable technicians. They fixed my phone screen quickly and for a great price.", author: "Michael K.", rating: 5 },
+    { quote: "I've been a ByteFix customer for years, and they always provide top-notch service. They're my go-to for all my tech needs.", author: "Emily R.", rating: 5 },
   ];
 
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -102,36 +102,36 @@ const IndexPage = () => {
             className="service-card"
             whileHover={{ scale: 1.05, boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)' }}
           >
-            <p className="service-icon">💻</p> {/* Placeholder Icon */}
+            <p className="service-icon">💻</p>
             <h3 className="service-title">Laptop Repair</h3>
-            <p className="service-description">🖼️ Fast and reliable laptop repair services.</p>
+            <p className="service-description">🖼️ Expert laptop repair services for all brands and models. We diagnose and fix hardware and software issues quickly and reliably.</p>
           </motion.div>
           {/* Service Card 2 */}
           <motion.div
             className="service-card"
             whileHover={{ scale: 1.05, boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)' }}
           >
-            <p className="service-icon">🦠</p> {/* Placeholder Icon */}
+            <p className="service-icon">🦠</p>
             <h3 className="service-title">Virus Removal</h3>
-            <p className="service-description">🖼️ Protect your computer from viruses and malware.</p>
+            <p className="service-description">🖼️ Comprehensive virus and malware removal to protect your computer and data. We use the latest tools and techniques to ensure your system is secure.</p>
           </motion.div>
           {/* Service Card 3 */}
           <motion.div
             className="service-card"
             whileHover={{ scale: 1.05, boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)' }}
           >
-            <p className="service-icon">💾</p> {/* Placeholder Icon */}
+            <p className="service-icon">💾</p>
             <h3 className="service-title">Data Recovery</h3>
-            <p className="service-description">🖼️ Recover lost data from damaged devices.</p>
+            <p className="service-description">🖼️ Professional data recovery services to retrieve lost files from damaged or corrupted storage devices. We have a high success rate and offer confidential service.</p>
           </motion.div>
           {/* Service Card 4 */}
           <motion.div
             className="service-card"
             whileHover={{ scale: 1.05, boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)' }}
           >
-            <p className="service-icon">⚙️</p> {/* Placeholder Icon */}
+            <p className="service-icon">⚙️</p>
             <h3 className="service-title">Hardware Upgrades</h3>
-            <p className="service-description">🖼️ Upgrade your computer hardware for better performance.</p>
+            <p className="service-description">🖼️ Upgrade your computer hardware for improved performance and efficiency. We offer a wide range of upgrades, including RAM, storage, and graphics cards.</p>
           </motion.div>
         </div>
       </section>
@@ -145,17 +145,17 @@ const IndexPage = () => {
           {/* Benefit 1 */}
           <div className="why-choose-us-benefit">
             <h3 className="why-choose-us-title">Quick Turnaround</h3>
-            <p className="why-choose-us-description">🖼️ Get your device back in working order fast.</p>
+            <p className="why-choose-us-description">🖼️ We understand the importance of getting your devices back to you quickly. We offer fast and efficient repair services to minimize downtime.</p>
           </div>
           {/* Benefit 2 */}
           <div className="why-choose-us-benefit">
             <h3 className="why-choose-us-title">Affordable Pricing</h3>
-            <p className="why-choose-us-description">🖼️ High-quality repairs at competitive prices.</p>
+            <p className="why-choose-us-description">🖼️ We believe that quality tech support shouldn't break the bank. We offer competitive pricing and transparent quotes.</p>
           </div>
           {/* Benefit 3 */}
           <div className="why-choose-us-benefit">
             <h3 className="why-choose-us-title">Certified Technicians</h3>
-            <p className="why-choose-us-description">🖼️ Trust our skilled and certified technicians.</p>
+            <p className="why-choose-us-description">🖼️ Our team of certified technicians has the expertise and experience to handle any tech issue. You can trust us to get the job done right.</p>
           </div>
         </div>
       </section>

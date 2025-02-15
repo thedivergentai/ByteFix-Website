@@ -18,13 +18,13 @@
 
 ## Project Overview
 
-This project aims to create a modern and engaging website for ByteFix, a tech solutions provider. The website is built using Gatsby, a React-based static site generator, and follows the brand guidelines outlined in `docs/BRAND_GUIDELINES.md`. The goal is to provide a user-friendly experience that effectively communicates ByteFix's brand essence and core values.
+This project creates a modern and engaging website for ByteFix, a tech solutions provider. Built with Gatsby, it follows brand guidelines in `docs/BRAND_GUIDELINES.md` to deliver a user-friendly experience that communicates ByteFix's core values.
 
 ## Project Structure
 
 The project is structured as follows:
 
-*   `gatsby-config.js`: Gatsby configuration file, including plugins and site metadata.
+*   `gatsby-config.js`: Gatsby configuration file.
 *   `src/`: Contains the source code for the website.
     *   `components/`: Reusable React components.
         *   `Header.js`: The website's header component, including navigation links and a placeholder logo.

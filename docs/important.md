@@ -23,7 +23,7 @@ This document summarizes the key rules and guidelines to follow for the ByteFix 
 ## Functionality & Components
 
 *   **Motion Library:** Utilize the `motion` library (from `motion/react` and `@motionone/dom`) for animations, especially for smooth scrolling and interactive elements.
-*   **Smooth Scrolling:** Implement smooth, tweened scrolling with "ease-in-out" easing for navigation links and buttons that scroll to sections.
+*   **Smooth Scrolling:** Implement smooth, tweened scrolling with "ease-in-out" easing for navigation links and buttons that scroll to sections. The current implementation uses `target.scrollIntoView({ behavior: 'smooth' })`. Further investigation is needed to fully integrate `motion.dev` for smooth scrolling as initially intended.
 *   **Sticky Header:** The header should be sticky and remain visible at the top of the page during scrolling.
 *   **Testimonials Section:** The testimonial section now displays all testimonials statically.
 *   **Repair Request Form:** Implement a basic repair request form with client-side validation.

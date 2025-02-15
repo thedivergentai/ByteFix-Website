@@ -35,9 +35,8 @@ This document outlines the steps to update the Gatsby website "ByteFix-Website" 
 ## 4. Website User Experience (UX) & Functionality
 
 *   **Navigation:**
-    *   A `Header` component has been created and added to `src/pages/index.js` with navigation links.
-    *   The navigation links point to the different sections of the landing page.
-    *   The "Request a Repair" link in the header is now a button.
+    *   A `Header` component has been created and added to `src/pages/index.js`.
+    *   The header now only contains the "Request a Repair" button.
 *   **Hero Section:**
     *   Implement a high-quality background image of a technician repairing a laptop. (This is a manual step for the user).
     *   Ensure the headline and CTA are the most prominent elements.

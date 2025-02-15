@@ -20,18 +20,6 @@ const Header = () => {
         </Link>
         <ul className="header-links">
           <li>
-            <Link to="/" className="header-link">Home</Link>
-          </li>
-          <li>
-            <Link to="/#services" className="header-link" onClick={() => handleScroll('services')}>Services</Link>
-          </li>
-          <li>
-            <Link to="/#why-choose-us" className="header-link" onClick={() => handleScroll('why-choose-us')}>Why Choose Us</Link>
-          </li>
-          <li>
-            <Link to="/#testimonials" className="header-link" onClick={() => handleScroll('testimonials')}>Testimonials</Link>
-          </li>
-          <li>
             <button className="header-button" onClick={() => handleScroll('repair-form')}>
               Request a Repair
             </button>

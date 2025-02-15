@@ -24,7 +24,7 @@ This document summarizes the key rules and guidelines to follow for the ByteFix 
 *   **Motion Library:** Utilize the `motion` library (from `motion/react` and `@motionone/dom`) for animations, especially for smooth scrolling and interactive elements.
 *   **Smooth Scrolling:** Implement smooth, tweened scrolling with "ease-in-out" easing for navigation links and buttons that scroll to sections.
 *   **Sticky Header:** The header should be sticky and remain visible at the top of the page during scrolling.
-*   **Testimonials Section:** The testimonial section now displays all testimonials statically, one underneath the other. The carousel functionality has been removed.
+*   **Testimonials Section:** The testimonial section now displays all testimonials statically, one underneath the other. The carousel functionality has been removed. The MIT license section has also been removed from the README.md file.
 *   **Repair Request Form:** Implement a basic repair request form with client-side validation.
 *   **Layout Component:** Use a `Layout` component (`src/components/Layout.js`) as the main container for the page structure, housing all sections and importing `global.css`. `index.js` should only call the `Layout` component.
 *   **Component Separation:** Separate the landing page into distinct components (Header, HeroSection, ServicesSection, WhyChooseUsSection, TestimonialsSection, RepairRequestFormSection, FooterSection) for better code organization.

@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import Header from "../components/Header";
+import Layout from "../components/Layout";
 import HeroSection from "../components/HeroSection";
 import ServicesSection from "../components/ServicesSection";
 import WhyChooseUsSection from "../components/WhyChooseUsSection";
 import TestimonialsSection from "../components/TestimonialsSection";
 import RepairRequestFormSection from "../components/RepairRequestFormSection";
-import FooterSection from "../components/FooterSection";
-import '../styles/global.css';
 
 const IndexPage = () => {
   const [formValues, setFormValues] = useState({ name: '', email: '', issue: '' });
@@ -42,8 +40,7 @@ const IndexPage = () => {
   };
 
   return (
-    <div>
-      <Header />
+    <Layout>
       <HeroSection />
       <ServicesSection />
       <WhyChooseUsSection />
@@ -55,8 +52,7 @@ const IndexPage = () => {
         handleSubmit={handleSubmit}
         validate={validate}
       />
-      <FooterSection />
-    </div>
+    </Layout>
   );
 }
 

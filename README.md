@@ -11,6 +11,7 @@
 *   [Project Overview](#project-overview)
 *   [Project Structure](#project-structure)
 *   [Technologies Used](#technologies-used)
+*   [Components](#components)
 *   [Setup Instructions](#setup-instructions)
 *   [Current Status](#current-status)
 *   [Contributing](#contributing)
@@ -27,13 +28,6 @@ The project is structured as follows:
 *   `gatsby-config.js`: Gatsby configuration file, including plugins and site metadata.
 *   `src/`: Contains the source code for the website.
     *   `components/`: Reusable React components.
-        *   `Header.js`: The website's header component, including navigation links and a placeholder logo.
-        *   `HeroSection.js`: The hero section of the landing page.
-        *   `ServicesSection.js`: The services section of the landing page.
-        *   `WhyChooseUsSection.js`: The "Why Choose Us?" section of the landing page.
-        *   `TestimonialsSection.js`: The testimonials section of the landing page.
-        *   `RepairRequestFormSection.js`: The repair request form section of the landing page.
-        *   `FooterSection.js`: The footer section of the landing page.
     *   `pages/`: React components that represent different pages of the website.
         *   `index.js`: The landing page for the website, implementing the ByteFix brand.
     *   `styles/`: CSS files for styling the website.
@@ -49,6 +43,16 @@ The project is structured as follows:
 *   React: A JavaScript library for building user interfaces.
 *   CSS: Styling language for web pages.
 *   Motion: A production-ready motion library for React.
+
+## Components
+
+*   `Header.js`: The website's header component, including navigation links and a placeholder logo.
+*   `HeroSection.js`: The hero section of the landing page, featuring the main heading, subheading, and call-to-action button.
+*   `ServicesSection.js`: The services section of the landing page, displaying a grid of available services with icons and descriptions.
+*   `WhyChooseUsSection.js`: The "Why Choose Us?" section of the landing page, highlighting the key benefits of choosing ByteFix.
+*   `TestimonialsSection.js`: The testimonials section of the landing page, showcasing customer testimonials in a carousel.
+*   `RepairRequestFormSection.js`: The repair request form section of the landing page, allowing users to submit a repair request.
+*   `FooterSection.js`: The footer section of the landing page, containing copyright information and links.
 
 ## Setup Instructions
 

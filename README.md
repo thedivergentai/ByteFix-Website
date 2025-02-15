@@ -9,7 +9,6 @@
 *   [Setup Instructions](#setup-instructions)
 *   [Current Status](#current-status)
 *   [Contributing](#contributing)
-*   [License](#license)
 
 ## Project Overview
 
@@ -45,7 +44,7 @@ The project is structured as follows:
 *   `HeroSection.js`: The hero section of the landing page, featuring the main heading, subheading, and call-to-action button.
 *   `ServicesSection.js`: The services section of the landing page, displaying a grid of available services with icons and descriptions.
 *   `WhyChooseUsSection.js`: The "Why Choose Us?" section of the landing page, highlighting the key benefits of choosing ByteFix.
-*   `TestimonialsSection.js`: The testimonials section of the landing page, showcasing customer testimonials in a carousel.
+*   `TestimonialsSection.js`: The testimonials section of the landing page, showcasing customer testimonials in a static list.
 *   `RepairRequestFormSection.js`: The repair request form section of the landing page, allowing users to submit a repair request.
 *   `FooterSection.js`: The footer section of the landing page, containing copyright information and links.
 *   `Layout.js`: The main container for the page structure, housing all sections and importing `global.css`.
@@ -86,7 +85,7 @@ The ByteFix website has been updated to reflect the brand guidelines and incorpo
 *   **Functionality:**
     *   Implemented a sticky header for improved navigation.
     *   Implemented smooth scrolling for navigation links and the hero section button.
-    *   Implemented a basic testimonial carousel.
+    *   The testimonial section now displays all testimonials statically.
     *   Implemented a basic repair request form with client-side validation.
 
 ## Contributing
@@ -98,7 +97,3 @@ Contributions to the project are welcome! To contribute, please follow these ste
 3.  Make your changes and commit them with descriptive commit messages.
 4.  Push your changes to your fork.
 5.  Submit a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).

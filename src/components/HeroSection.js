@@ -42,7 +42,7 @@ const HeroSection = () => {
         className="hero-subheading"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 0.7, delay: 0.2 } }}
-      >
+        >
         🖼️ Get Your Devices Fixed—Fast & Hassle-Free. Reliable tech solutions, simplified.
       </motion.p>
       <motion.button
@@ -50,9 +50,11 @@ const HeroSection = () => {
         variants={buttonVariants}
         whileHover="hover"
         whileTap="tap"
-        onClick={scrollToRepairForm}
-        style={{
-          border: "2px solid transparent",
+        onClick={() => {
+          const repairFormSection = document.getElementById('repair-form');
+          if (repairFormSection) {
+            repairFormSection.scrollIntoView({ behavior: 'smooth' });
+          }
         }}
         animate={ buttonAnimation }
       >

@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight, faUser } from '@fortawesome/free-solid-svg-icons';
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -31,30 +33,19 @@ const TestimonialsSection = () => {
       <h2 className="testimonials-heading">
         What Our Customers Say
       </h2>
-      <div style={{ position: 'relative', overflow: 'hidden', maxWidth: '800px', margin: '0 auto' }}>
+      <div className="testimonial-carousel-container">
         <div
           className="testimonial-carousel"
           ref={carouselRef}
-          style={{
-            display: 'flex',
-            transition: 'transform 0.5s ease-in-out',
-            transform: `translateX(-${currentTestimonial * 100}%)`,
-          }}
         >
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
               className="testimonial-card"
-              style={{
-                flexShrink: 0,
-                width: '100%',
-                padding: '1.5rem',
-                boxSizing: 'border-box',
-                display: 'flex',
-                alignItems: 'center',
-              }}
             >
-            <span style={{ fontSize: '4rem', marginRight: '2rem' }}>👤</span> {/* Placeholder Image */}
+              <span className="testimonial-image">
+                <FontAwesomeIcon icon={faUser} />
+              </span>
               <div>
                 <p className="testimonial-quote">"{testimonial.quote}"</p>
                 <p className="testimonial-author">- {testimonial.author}, {testimonial.rating} stars</p>
@@ -62,18 +53,18 @@ const TestimonialsSection = () => {
             </div>
           ))}
         </div>
-          <button
-            style={{ position: 'absolute', top: '50%', left: '0', transform: 'translateY(-50%)', background: 'none', border: 'none', fontSize: '2rem', cursor: 'pointer' }}
-            onClick={prevTestimonial}
-          >
-            &lt;
-          </button>
-          <button
-            style={{ position: 'absolute', top: '50%', right: '0', transform: 'translateY(-50%)', background: 'none', border: 'none', fontSize: '2rem', cursor: 'pointer' }}
-            onClick={nextTestimonial}
-          >
-            &gt;
-          </button>
+        <button
+          className="testimonial-button testimonial-button-prev"
+          onClick={prevTestimonial}
+        >
+          <FontAwesomeIcon icon={faChevronLeft} />
+        </button>
+        <button
+          className="testimonial-button testimonial-button-next"
+          onClick={nextTestimonial}
+        >
+          <FontAwesomeIcon icon={faChevronRight} />
+        </button>
       </div>
     </section>
   );

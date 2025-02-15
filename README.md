@@ -2,7 +2,7 @@
 
 ***
 
-<h1 align="center">💻 ByteFix: Reliable Tech Solutions, Simplified</p>
+<p align="center">💻 ByteFix: Reliable Tech Solutions, Simplified</p>
 
 ***
 
@@ -24,10 +24,16 @@ This project creates a modern and engaging website for ByteFix, a tech solutions
 
 The project is structured as follows:
 
-*   `gatsby-config.js`: Gatsby configuration file.
+*   `gatsby-config.js`: Gatsby configuration file, including plugins and site metadata.
 *   `src/`: Contains the source code for the website.
     *   `components/`: Reusable React components.
         *   `Header.js`: The website's header component, including navigation links and a placeholder logo.
+        *   `HeroSection.js`: The hero section of the landing page.
+        *   `ServicesSection.js`: The services section of the landing page.
+        *   `WhyChooseUsSection.js`: The "Why Choose Us?" section of the landing page.
+        *   `TestimonialsSection.js`: The testimonials section of the landing page.
+        *   `RepairRequestFormSection.js`: The repair request form section of the landing page.
+        *   `FooterSection.js`: The footer section of the landing page.
     *   `pages/`: React components that represent different pages of the website.
         *   `index.js`: The landing page for the website, implementing the ByteFix brand.
     *   `styles/`: CSS files for styling the website.
@@ -68,7 +74,7 @@ To run the website locally, follow these steps:
 
 ## Current Status
 
-The website's landing page (`src/pages/index.js`) has been updated with the ByteFix brand's color palette, typography, and placeholder content. A basic navigation header has been implemented. The `gatsby-plugin-google-fonts` plugin has been added and configured to load the Montserrat and Roboto fonts.
+The website's landing page (`src/pages/index.js`) has been updated with the ByteFix brand's color palette, typography, and placeholder content. A basic navigation header has been implemented. The `gatsby-plugin-google-fonts` plugin has been added and configured to load the Montserrat and Roboto fonts. The main sections of the landing page have been split into separate components.
 
 ## Contributing
 

@@ -38,81 +38,8 @@ h1, h2, h3, h4, h5, h6 {
   position: sticky;
   top: 0;
   z-index: 100;
+  box-sizing: border-box;
 }
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-  /* Header adjustments */
-  .header {
-    padding: 0.5rem 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  .header-nav {
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .header-logo {
-    font-size: 1.2rem;
-  }
-  .header-links {
-    margin-left: auto;
-  }
-  .header-button {
-    padding: 0.3rem 0.6rem;
-    font-size: 0.9rem;
-  }
-
-  /* Apply max-width: 90% to content classes in mobile view */
-  .header-content,
-  .hero-content,
-  .services-content,
-  .why-choose-us-content,
-  .testimonials-content,
-  .repair-request-content {
-    max-width: 90%; /* Setting max-width to 90% for mobile content areas */
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* Services & Why Choose Us Sections - single column grids */
-  .services-grid,
-  .why-choose-us-grid {
-    grid-template-columns: 1fr;
-  }
-  .services-section,
-  .why-choose-us-section {
-    padding: 2rem 1rem;
-  }
-
-  /* Testimonials Section adjustments */
-  .testimonials-carousel-container {
-    max-width: 100%; /* Allow full width on mobile */
-  }
-  .testimonial-container {
-    width: 90%; /* Adjust testimonial width */
-    margin: 0 auto; /* Center testimonial */
-  }
-  .testimonials-section {
-    padding: 2rem 1rem;
-  }
-
-  /* Repair Request Form Section adjustments */
-  .repair-request-section {
-    padding: 2rem 1rem;
-  }
-  .repair-request-form {
-    max-width: 90%; /* Make form wider on mobile */
-  }
-}
-
-.hero-button {
-    padding: 0.3rem 0.6rem;
-    font-size: 0.9rem;
-  }
 
 .header-nav {
   max-width: var(--max-content-width); /* Apply max-width variable */
@@ -152,11 +79,9 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   border-radius: 5px;
   font-size: 1rem;
+  box-sizing: border-box;
 }
 
-.header-content {
-  /* Remove any max-width or flexbox styles from here */
-}
 
 /* Hero Section */
 .hero-section {
@@ -164,12 +89,17 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--primary-color-light); /* Use a lighter shade of blue */
   padding: 4rem 2rem;
   text-align: center;
+  box-sizing: border-box;
+  min-height: 700px; /* Set minimum height for hero section */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero-heading {
   color: var(--primary-color);
   font-size: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem; /* Increased margin */
 }
 
 .hero-subheading {
@@ -187,6 +117,7 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   font-size: 1.1rem;
   transition: transform 0.2s ease;
+  box-sizing: border-box;
 }
 
 .hero-button:hover {
@@ -198,18 +129,23 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
 }
 
+
 /* Services Section */
 .services-section {
   width: 100%;
   background-color: var(--accent-color); /* Use accent color */
   padding: 3rem 2rem;
+  min-height: 500px; /* Set minimum height for services section */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .services-heading {
   color: var(--primary-color);
   font-size: 2rem;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem; /* Increased margin */
 }
 
 .services-grid {
@@ -223,6 +159,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
 }
 
+
 /* Why Choose Us Section */
 .why-choose-us-section {
   width: 100%;
@@ -230,12 +167,16 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff; /* Invert text color for contrast */
   padding: 3rem 2rem;
   text-align: center;
+  min-height: 500px; /* Set minimum height for why choose us section */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .why-choose-us-heading {
   color: var(--accent-color); /* Use accent color */
   font-size: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem; /* Increased margin */
 }
 
 .why-choose-us-grid {
@@ -249,18 +190,20 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
 }
 
+
 /* Testimonials Section */
 .testimonials-section {
   width: 100%;
   background-color: var(--accent-color-dark); /* Use a darker shade of accent */
   padding: 3rem 2rem;
   text-align: center;
+  min-height: 500px; /* Set minimum height for testimonials section */
 }
 
 .testimonials-heading {
   color: var(--primary-color);
   font-size: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem; /* Increased margin */
 }
 
 .testimonials-carousel-container {
@@ -337,23 +280,6 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-50%);
 }
 
-/* Style adjustments for better visual appearance */
-.testimonial-carousel-container {
-  align-items: center; /* Vertically center the content */
-  justify-content: center; /* Center the content horizontally */
-  max-width: 800px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.testimonial-nav-button {
-  font-size: 3rem; /* Increase the size of the chevrons */
-}
-
-.testimonials-content {
-  max-width: var(--max-content-width);
-  margin: 0 auto;
-}
 
 /* Repair Request Form Section */
 .repair-request-section {
@@ -362,12 +288,16 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff; /* Invert text color for contrast */
   padding: 3rem 2rem;
   text-align: center;
+  min-height: 500px; /* Set minimum height for repair request form section */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .repair-request-heading {
   color: var(--accent-color); /* Use accent color */
   font-size: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem; /* Increased margin */
 }
 
 .repair-request-form {
@@ -417,10 +347,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
-.repair-request-content {
-  max-width: var(--max-content-width);
-  margin: 0 auto;
-}
 
 /* Footer */
 .footer {
@@ -447,14 +373,47 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: underline;
 }
 
+
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
+  /* General Mobile Styles */
+  .header-content,
+  .hero-content,
+  .services-content,
+  .why-choose-us-content,
+  .testimonials-content,
+  .repair-request-content {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-button {
+    padding: 1.5rem 1rem; /* Adjusted padding for taller and less wide button */
+    font-size: 1rem;
+  }
+
+  .header-button {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+  }
+
+  .services-section,
+  .why-choose-us-section,
+  .repair-request-section {
+    display: block;
+    flex-direction: unset;
+    justify-content: unset;
+  }
+
   /* Header adjustments */
   .header {
     padding: 0.5rem 1rem;
     position: sticky;
     top: 0;
     z-index: 100;
+    box-sizing: border-box;
   }
   .header-logo {
     font-size: 1.2rem;
@@ -467,17 +426,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.9rem;
   }
 
-  /* Apply max-width: 90% to content classes in mobile view */
-  .header-content,
-  .hero-content,
-  .services-content,
-  .why-choose-us-content,
-  .testimonials-content,
-  .repair-request-content {
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-  }
 
   /* Services & Why Choose Us Sections - single column grids */
   .services-grid,
@@ -487,6 +435,7 @@ h1, h2, h3, h4, h5, h6 {
   .services-section,
   .why-choose-us-section {
     padding: 2rem 1rem;
+    box-sizing: border-box;
   }
 
   /* Testimonials Section adjustments */
@@ -499,11 +448,13 @@ h1, h2, h3, h4, h5, h6 {
   }
   .testimonials-section {
     padding: 2rem 1rem;
+    box-sizing: border-box;
   }
 
   /* Repair Request Form Section adjustments */
   .repair-request-section {
     padding: 2rem 1rem;
+    box-sizing: border-box;
   }
   .repair-request-form {
     max-width: 90%; /* Make form wider on mobile */

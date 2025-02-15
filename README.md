@@ -1,6 +1,10 @@
 # ByteFix Website
 
-This is the Gatsby website for ByteFix, a tech solutions provider, built to showcase their brand and services.
+***
+
+<p align="center">💻 ByteFix: Reliable Tech Solutions, Simplified</p>
+
+***
 
 ## Table of Contents
 

@@ -29,6 +29,38 @@ const IndexPage = () => {
     return () => clearInterval(intervalId);
   }, [testimonials.length]);
 
+  const [formValues, setFormValues] = useState({ name: '', email: '', issue: '' });
+  const [formErrors, setFormErrors] = useState({});
+
+  const handleChange = (e) => {
+    setFormValues({ ...formValues, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const errors = validate(formValues);
+    setFormErrors(errors);
+    if (Object.keys(errors).length === 0) {
+      alert("Form submitted successfully!"); // Placeholder for actual submission
+    }
+  };
+
+  const validate = (values) => {
+    const errors = {};
+    if (!values.name) {
+      errors.name = "Name is required";
+    }
+    if (!values.email) {
+      errors.email = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
+      errors.email = "Invalid email format";
+    }
+    if (!values.issue) {
+      errors.issue = "Device issue is required";
+    }
+    return errors;
+  };
+
   return (
     <div >
       <Header />
@@ -157,15 +189,39 @@ const IndexPage = () => {
         <h2 className="repair-request-heading">
           Request a Repair
         </h2>
-        <form className="repair-request-form">
+        <form className="repair-request-form" onSubmit={handleSubmit}>
           <label htmlFor="name" className="form-label">Name:</label>
-          <input type="text" id="name" name="name" className="form-input" />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            className="form-input"
+            value={formValues.name}
+            onChange={handleChange}
+          />
+          {formErrors.name && <p className="form-validation-message">{formErrors.name}</p>}
 
           <label htmlFor="email" className="form-label">Email:</label>
-          <input type="email" id="email" name="email" className="form-input" />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            className="form-input"
+            value={formValues.email}
+            onChange={handleChange}
+          />
+          {formErrors.email && <p className="form-validation-message">{formErrors.email}</p>}
 
           <label htmlFor="issue" className="form-label">Device Issue:</label>
-          <textarea id="issue" name="issue" rows="4" className="form-textarea"></textarea>
+          <textarea
+            id="issue"
+            name="issue"
+            rows="4"
+            className="form-textarea"
+            value={formValues.issue}
+            onChange={handleChange}
+          ></textarea>
+          {formErrors.issue && <p className="form-validation-message">{formErrors.issue}</p>}
 
           <button type="submit" className="form-button">
             Submit Request

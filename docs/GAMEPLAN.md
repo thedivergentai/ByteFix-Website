@@ -131,3 +131,6 @@ This document outlines the steps to update the Gatsby website "ByteFix-Website" 
     </motion.h1>
     ```
 5.  **Customize animations:**  Adjust animation properties (duration, delay, easing, etc.) within the `transition` object to achieve the desired effects.
+
+*   The header is now sticky.
+*   Basic form validation has been implemented.

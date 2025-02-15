@@ -4,7 +4,7 @@ import '../styles/global.css'; // Import the global styles
 
 const Header = () => {
   return (
-    <header style={{ backgroundColor: '#F8F9FA', padding: '1rem 2rem', borderBottom: '1px solid #E9ECEF' }}>
+    <header className="header">
       <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <Link to="/" style={{ color: '#0D6EFD', fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold', fontSize: '1.5rem', textDecoration: 'none' }}>
           💻 ByteFix

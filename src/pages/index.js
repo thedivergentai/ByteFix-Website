@@ -213,7 +213,7 @@ const IndexPage = () => {
             style={{ position: 'absolute', top: '50%', right: '0', transform: 'translateY(-50%)', background: 'none', border: 'none', fontSize: '2rem', cursor: 'pointer' }}
             onClick={nextTestimonial}
           >
-            &rt;
+            &gt;
           </button>
         </div>
       </section>

@@ -2,7 +2,7 @@
 
 ***
 
-<p align="center">💻 ByteFix: Reliable Tech Solutions, Simplified</p>
+<h1 align="center">💻 ByteFix: Reliable Tech Solutions, Simplified</p>
 
 ***
 

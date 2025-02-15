@@ -51,7 +51,7 @@ This document outlines the steps to update the Gatsby website "ByteFix-Website" 
     *   Consider using simple icons to reinforce each benefit. (This is a manual step for the user).
     *   Use clear visual separation.
 *   **Customer Testimonials Section:**
-    *   Use real testimonials from satisfied customers. (This is a manual step for the user).
+    *   Use real testimonials from satisfied customers.
     *   A basic carousel has been implemented to display the testimonials.
 *   **Repair Request Form Section:**
     *   Keep the form simple and user-friendly.
@@ -134,3 +134,4 @@ This document outlines the steps to update the Gatsby website "ByteFix-Website" 
 *   The header is now sticky.
 *   Basic form validation has been implemented.
 *   Clear and recognizable icons (💻, 🦠, 💾, ⚙️) are now used for each service.
+*   The testimonial carousel now scrolls infinitely.

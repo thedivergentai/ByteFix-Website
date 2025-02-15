@@ -2,6 +2,26 @@ import React from "react";
 import { motion } from "motion/react";
 
 const HeroSection = ({ scrollToRepairForm }) => {
+  const buttonVariants = {
+    hover: {
+      scale: 1.1,
+      borderColor: "#63A4FF",
+      transition: {
+        duration: 0.3,
+      },
+    },
+    tap: { scale: 0.9 },
+  };
+
+  const buttonAnimation = {
+    scale: [1, 1.1, 1],
+    transition: {
+      duration: 2,
+      yoyo: Infinity,
+      ease: "easeInOut",
+    },
+  };
+
   return (
     <section className="hero-section">
       <motion.h1
@@ -20,10 +40,14 @@ const HeroSection = ({ scrollToRepairForm }) => {
       </motion.p>
       <motion.button
         className="hero-button"
-        whileHover={{ scale: 1.05 }}
+        variants={buttonVariants}
+        whileHover="hover"
+        whileTap="tap"
         onClick={scrollToRepairForm}
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1, transition: { duration: 0.5, delay: 0.4 } }}
+        style={{
+          border: "2px solid transparent",
+        }}
+        animate={buttonAnimation}
       >
         Request a Repair
       </motion.button>

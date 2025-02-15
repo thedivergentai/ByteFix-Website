@@ -23,7 +23,9 @@ const Header = () => {
             <Link to="/#testimonials" style={{ color: '#212529', textDecoration: 'none' }}>Testimonials</Link>
           </li>
           <li style={{ marginLeft: '1rem' }}>
-            <Link to="/#repair-form" style={{ color: '#212529', textDecoration: 'none' }}>Request a Repair</Link>
+            <Link to="/#repair-form" style={{ color: '#212529', textDecoration: 'none' }}>
+              <button style={{ color: '#fff', background: '#0D6EFD', border: 'none', padding: '0.5rem 1rem', cursor: 'pointer', borderRadius: '5px' }}>Request a Repair</button>
+            </Link>
           </li>
         </ul>
       </nav>

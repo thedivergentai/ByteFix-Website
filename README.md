@@ -1,5 +1,3 @@
-# ByteFix Website
-
 ***
 
 <h1 align="center">💻 ByteFix: Reliable Tech Solutions, Simplified</h1>

@@ -3,8 +3,12 @@
 /* Color Palette */
 :root {
   --primary-color: #0D6EFD;
+  --primary-color-light: #A7D1FF; /* Lighter shade of primary */
+  --primary-color-dark: #003399; /* Darker shade of primary */
   --secondary-color: #212529;
+  --secondary-color-light: #777777; /* Lighter shade of secondary */
   --accent-color: #F8F9FA;
+  --accent-color-dark: #D3D3D3; /* Slightly darker shade of accent */
   --text-color: #212529;
   --light-gray: #E9ECEF; /* For borders and subtle backgrounds */
 }
@@ -36,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero Section */
 .hero-section {
-  background-color: var(--accent-color);
+  background-color: var(--primary-color-light); /* Use a lighter shade of blue */
   padding: 4rem 2rem;
   text-align: center;
 }
@@ -70,6 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Services Section */
 .services-section {
+  background-color: var(--accent-color); /* Use accent color */
   padding: 3rem 2rem;
 }
 
@@ -112,13 +117,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Why Choose Us Section */
 .why-choose-us-section {
-  background-color: var(--accent-color);
+  background-color: var(--secondary-color-light); /* Use a lighter shade of gray */
+  color: #fff; /* Invert text color for contrast */
   padding: 3rem 2rem;
   text-align: center;
 }
 
 .why-choose-us-heading {
-  color: var(--primary-color);
+  color: var(--accent-color); /* Use accent color */
   font-size: 2rem;
   margin-bottom: 2rem;
 }
@@ -133,7 +139,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .why-choose-us-title {
-  color: var(--primary-color);
+  color: var(--accent-color); /* Use accent color */
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
@@ -145,6 +151,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Testimonials Section */
 .testimonials-section {
+  background-color: var(--accent-color-dark); /* Use a darker shade of accent */
   padding: 3rem 2rem;
   text-align: center;
 }
@@ -176,13 +183,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Repair Request Form Section */
 .repair-request-section {
-  background-color: var(--accent-color);
+  background-color: var(--primary-color-dark); /* Use a darker shade of blue */
+  color: #fff; /* Invert text color for contrast */
   padding: 3rem 2rem;
   text-align: center;
 }
 
 .repair-request-heading {
-  color: var(--primary-color);
+  color: var(--accent-color); /* Use accent color */
   font-size: 2rem;
   margin-bottom: 2rem;
 }
@@ -236,10 +244,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Footer */
 .footer {
+  background-color: var(--secondary-color); /* Use secondary color */
   padding: 2rem;
   text-align: center;
   font-size: 0.9rem;
-  color: #6c757d;
+  color: #fff; /* Invert text color for contrast */
 }
 
 .footer-links {

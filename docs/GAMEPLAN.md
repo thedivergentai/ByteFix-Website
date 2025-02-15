@@ -37,10 +37,11 @@ This document outlines the steps to update the Gatsby website "ByteFix-Website" 
 *   **Navigation:**
     *   A `Header` component has been created and added to `src/pages/index.js` with navigation links.
     *   The navigation links point to the different sections of the landing page.
+    *   The "Request a Repair" link in the header is now a button.
 *   **Hero Section:**
     *   Implement a high-quality background image of a technician repairing a laptop. (This is a manual step for the user).
     *   Ensure the headline and CTA are the most prominent elements.
-    *   The "Request a Repair" button now scrolls smoothly to the repair form section.
+    *   The "Request a Repair" button now scrolls smoothly to the repair form section and has a grow/shrink animation with a hover effect.
 *   **Our Services Section:**
     *   Clear and recognizable icons (💻, 🦠, 💾, ⚙️) are now used for each service.
     *   Provide concise service descriptions.
@@ -74,7 +75,6 @@ This document outlines the steps to update the Gatsby website "ByteFix-Website" 
     *   Leverage browser caching. (This is a manual step for the user).
 *   **Responsive Design:**
     *   Ensure the website is fully responsive and functions seamlessly across all devices. (This is a manual step for the user).
-*   **Accessibility:**
     *   Design the website with accessibility in mind (WCAG guidelines). (This is a manual step for the user).
 *   **SEO Optimization:**
     *   Implement basic SEO best practices for on-page optimization. (This is a manual step for the user).
@@ -136,3 +136,5 @@ This document outlines the steps to update the Gatsby website "ByteFix-Website" 
 *   Clear and recognizable icons (💻, 🦠, 💾, ⚙️) are now used for each service.
 *   The testimonial carousel now scrolls infinitely.
 *   The main sections of the landing page have been split into separate components.
+*   The hero section button has a grow/shrink animation and a hover effect.
+*   The "Request a Repair" link in the header is now a button.

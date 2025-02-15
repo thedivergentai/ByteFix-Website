@@ -2,6 +2,7 @@ import * as React from "react"
 import { motion } from "motion/react"
 import Header from "../components/Header"
 import '../styles/global.css';
+import { useState, useEffect, useRef } from 'react';
 
 const IndexPage = () => {
   const scrollToRepairForm = () => {
@@ -10,6 +11,23 @@ const IndexPage = () => {
       repairFormSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const testimonials = [
+    { quote: "Great service! They fixed my laptop quickly and efficiently.", author: "John Doe", rating: 5 },
+    { quote: "I was impressed with their professionalism and expertise.", author: "Jane Smith", rating: 5 },
+    { quote: "Highly recommend ByteFix for all your tech repair needs!", author: "Peter Jones", rating: 5 },
+  ];
+
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const carouselRef = useRef(null);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000); // Change testimonial every 5 seconds
+
+    return () => clearInterval(intervalId);
+  }, [testimonials.length]);
 
   return (
     <div >
@@ -28,7 +46,7 @@ const IndexPage = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { duration: 0.7, delay: 0.2 } }}
         >
-          Get Your Devices Fixed—Fast & Hassle-Free. Reliable tech solutions, simplified.
+          🖼️ Get Your Devices Fixed—Fast & Hassle-Free. Reliable tech solutions, simplified.
         </motion.p>
         <motion.button
           className="hero-button"
@@ -54,7 +72,7 @@ const IndexPage = () => {
           >
             <p className="service-icon">💻</p> {/* Placeholder Icon */}
             <h3 className="service-title">Laptop Repair</h3>
-            <p className="service-description">Fast and reliable laptop repair services.</p>
+            <p className="service-description">🖼️ Fast and reliable laptop repair services.</p>
           </motion.div>
           {/* Service Card 2 */}
           <motion.div
@@ -63,7 +81,7 @@ const IndexPage = () => {
           >
             <p className="service-icon">🦠</p> {/* Placeholder Icon */}
             <h3 className="service-title">Virus Removal</h3>
-            <p className="service-description">Protect your computer from viruses and malware.</p>
+            <p className="service-description">🖼️ Protect your computer from viruses and malware.</p>
           </motion.div>
           {/* Service Card 3 */}
           <motion.div
@@ -72,7 +90,7 @@ const IndexPage = () => {
           >
             <p className="service-icon">💾</p> {/* Placeholder Icon */}
             <h3 className="service-title">Data Recovery</h3>
-            <p className="service-description">Recover lost data from damaged devices.</p>
+            <p className="service-description">🖼️ Recover lost data from damaged devices.</p>
           </motion.div>
           {/* Service Card 4 */}
           <motion.div
@@ -81,7 +99,7 @@ const IndexPage = () => {
           >
             <p className="service-icon">⚙️</p> {/* Placeholder Icon */}
             <h3 className="service-title">Hardware Upgrades</h3>
-            <p className="service-description">Upgrade your computer hardware for better performance.</p>
+            <p className="service-description">🖼️ Upgrade your computer hardware for better performance.</p>
           </motion.div>
         </div>
       </section>
@@ -95,17 +113,17 @@ const IndexPage = () => {
           {/* Benefit 1 */}
           <div className="why-choose-us-benefit">
             <h3 className="why-choose-us-title">Quick Turnaround</h3>
-            <p className="why-choose-us-description">Get your device back in working order fast.</p>
+            <p className="why-choose-us-description">🖼️ Get your device back in working order fast.</p>
           </div>
           {/* Benefit 2 */}
           <div className="why-choose-us-benefit">
             <h3 className="why-choose-us-title">Affordable Pricing</h3>
-            <p className="why-choose-us-description">High-quality repairs at competitive prices.</p>
+            <p className="why-choose-us-description">🖼️ High-quality repairs at competitive prices.</p>
           </div>
           {/* Benefit 3 */}
           <div className="why-choose-us-benefit">
             <h3 className="why-choose-us-title">Certified Technicians</h3>
-            <p className="why-choose-us-description">Trust our skilled and certified technicians.</p>
+            <p className="why-choose-us-description">🖼️ Trust our skilled and certified technicians.</p>
           </div>
         </div>
       </section>
@@ -115,18 +133,22 @@ const IndexPage = () => {
         <h2 className="testimonials-heading">
           What Our Customers Say
         </h2>
-        {/* Placeholder Testimonial */}
-        <div className="testimonial-card">
-          <p className="testimonial-quote">"Great service! They fixed my laptop quickly and efficiently."</p>
-          <p className="testimonial-author">- John Doe, 5 stars</p>
-        </div>
-        <div className="testimonial-card">
-          <p className="testimonial-quote">"I was impressed with their professionalism and expertise."</p>
-          <p className="testimonial-author">- Jane Smith, 5 stars</p>
-        </div>
-        <div className="testimonial-card">
-          <p className="testimonial-quote">"Highly recommend ByteFix for all your tech repair needs!"</p>
-          <p className="testimonial-author">- Peter Jones, 5 stars</p>
+        <div className="testimonial-carousel" ref={carouselRef} style={{ overflowX: 'auto', whiteSpace: 'nowrap', scrollSnapType: 'x mandatory', paddingBottom: '1rem' }}>
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className="testimonial-card"
+              style={{ display: 'inline-block', width: '80%', minWidth: '300px', scrollSnapAlign: 'start', margin: '0 1rem' }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem' }}>
+                <span style={{ fontSize: '3rem', marginRight: '1rem' }}>👤</span> {/* Placeholder Image */}
+                <div>
+                  <p className="testimonial-quote">"{testimonial.quote}"</p>
+                  <p className="testimonial-author">- {testimonial.author}, {testimonial.rating} stars</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 

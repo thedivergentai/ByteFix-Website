@@ -19,10 +19,10 @@ This document outlines the steps to update the Gatsby website "ByteFix-Website" 
     *   Import the Montserrat (Bold) and Roboto (Regular) fonts into the project using the `gatsby-plugin-google-fonts` plugin in `gatsby-config.js`.
     *   The `src/styles/global.css` file now includes CSS classes for the typography.
 *   **Logo:**
-    *   Replace the placeholder "ByteFix Logo" text in the hero section with the actual ByteFix logo image.  (This is a manual step for the user).
+    *   The `Header` component now includes a placeholder icon (💻) next to the "ByteFix" text.
 *   **Imagery & Visual Elements:**
-    *   Replace any existing placeholder images with authentic, practical, and people-focused images that align with the brand guidelines. (This is a manual step for the user).
-    *   Consider adding subtle geometric shapes or patterns (inspired by circuit boards) as background textures or section dividers. (This is a manual step for the user).
+    *   Placeholder images (🖼️) have been added throughout the landing page.
+    *   Placeholder images (👤) have been added to the testimonial section.
 
 ## 3. Content Update
 
@@ -53,7 +53,7 @@ This document outlines the steps to update the Gatsby website "ByteFix-Website" 
     *   Use clear visual separation.
 *   **Customer Testimonials Section:**
     *   Use real testimonials from satisfied customers. (This is a manual step for the user).
-    *   Use a slider or carousel to showcase multiple testimonials. (This is a manual step for the user).
+    *   A basic carousel has been implemented to display the testimonials.
 *   **Repair Request Form Section:**
     *   Keep the form simple and user-friendly.
     *   Implement clear labels and instructions.

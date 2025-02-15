@@ -7,7 +7,7 @@ const Header = () => {
     <header style={{ backgroundColor: '#F8F9FA', padding: '1rem 2rem', borderBottom: '1px solid #E9ECEF' }}>
       <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <Link to="/" style={{ color: '#0D6EFD', fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold', fontSize: '1.5rem', textDecoration: 'none' }}>
-          ByteFix Logo {/* Placeholder for the logo */}
+          💻 ByteFix
         </Link>
         <ul style={{ display: 'flex', listStyle: 'none', margin: 0, padding: 0 }}>
           <li style={{ marginLeft: '1rem' }}>

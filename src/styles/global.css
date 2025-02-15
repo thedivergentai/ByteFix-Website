@@ -31,19 +31,21 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Header */
 .header {
-  width: 100%;
+  width: 100%; /* Ensure header spans full width */
   background-color: var(--accent-color);
   padding: 1rem 2rem;
   border-bottom: 1px solid var(--light-gray);
-  position: sticky; /* Make the header sticky */
+  position: sticky;
   top: 0;
-  z-index: 100; /* Ensure it stays on top of other content */
+  z-index: 100;
 }
 
 .header-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  max-width: var(--max-content-width); /* Apply max-width variable */
+  margin: 0 auto; /* Center the header content */
+  display: flex; /* Enable flexbox layout */
+  justify-content: space-between; /* Space out logo and links */
+  align-items: center; /* Vertically align items */
 }
 
 .header-logo {
@@ -78,8 +80,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-content {
-  max-width: var(--max-content-width);
-  margin: 0 auto;
+  /* Remove any max-width or flexbox styles from here */
 }
 
 /* Hero Section */
@@ -189,7 +190,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .testimonials-carousel-container {
   display: flex;
-  align-items: center;
+  align-items: center; /* Vertically center the content */
   justify-content: center; /* Center the content horizontally */
   max-width: 800px;
   margin: 0 auto;

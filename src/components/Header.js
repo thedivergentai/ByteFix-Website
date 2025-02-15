@@ -15,10 +15,12 @@ const Header = () => {
   return (
     <header className="header">
       <nav className="header-nav">
-        <div className="header-content">
+        <div className="header-logo-container">
           <Link to="/" className="header-logo">
             💻 ByteFix
           </Link>
+        </div>
+        <div className="header-links-container">
           <ul className="header-links">
             <li>
               <button className="header-button" onClick={() => handleScroll('repair-form')}>
